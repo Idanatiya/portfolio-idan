@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imgs/icon.png">
+    <title>Book shop</title>
+</head>
+
+<body onload="onInit()">
+    <div class="container">
+        <h1 class="header">Book shop</h1>
+        <button class="btn btn-add" onclick="onOpenAddModal()">Add a book</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th class="clickable" onclick="onSetSort('name')">Title</th>
+                    <th class="clickable" onclick="onSetSort('price')">Price</th>
+                    <th>Preview</th>
+                    <th colspan="3">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="books-table"></tbody>
+        </table>
+
+        <div class="pagination">
+            <button class="btn" onclick="onManagePagination(1)">Next Page</button>
+            <span class="curr-page">1</span>
+            <button class="btn" onclick="onManagePagination(-1)">Previous Page</button>
+        </div>
+    </div>
+    <section class="book-details hide">
+        <button class="close-btn" onclick="onCloseModal()">x</button>
+        <h1>Book Info</h1>
+        <img src="" alt="some-img" />
+        <!--Book name-->
+        <h1 class="title"></h1>
+        <!--Book price-->
+        <h3>Price: <span class="price"></span></h3>
+        <!--Book id-->
+        <h3 class="book-id"></h3>
+        <!--Book rating-->
+        <div class="rating-container">
+            <button class="btn plus-btn" onclick="onManageRating(this, 1)">+</button>
+            <span class="rating">0</span>
+            <button class="btn minus-btn" onclick="onManageRating(this, -1)">-</button>
+            <!-- <button class="btn plus-btn" onclick="onAddRating()">+</button>
+                <span class="rating">0</span>
+                <button class="btn minus-btn" onclick="onMinusRating()">-</button> -->
+        </div>
+    </section>
+
+    <section class="add-book-modal hide">
+        <span>Add book modal</span>
+        <label>Title</label>
+        <input type="text" class="book-title">
+        <label>Price</label>
+        <input type="text" class="book-price">
+        <label>Image</label>
+        <input type="text" class="book-img">
+        <button class="btn btn-add" onclick="onAddBook()">Add to libraray</button>
+    </section>
+
+
+    <!-- <div class="update">
+        <input type="text" class="update-price">
+        <button>Update</button>
+    </div> -->
+    <section class="modal-welcome">
+        <h1>Welcome to the shop!</h1>
+    </section>
+
+
+    <script src="js/services/util-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>

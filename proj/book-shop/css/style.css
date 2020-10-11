@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #cdcdcd;
+    background-image: url(../imgs/panda.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: 650px;
+    /* overflow: hidden; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 150px; */
+}
+
+.modal-welcome {
+    background-color: #f8f8f8;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    width: 250px;
+    top: 620px;
+    left: 250px;
+    text-align: center;
+    padding: 2rem 2rem;
+    position: absolute;
+    color: black;
+    font-family: monospace, sans-serif;
+    z-index: -1;
+}
+
+.header {
+    margin: 20px 0;
+    font-family: monospace, sans-serif;
+    font-size: 45px;
+}
+
+.btn-add {
+    margin: 10px;
+}
+
+.show {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    background: white;
+    font-family: monospace, sans-serif;
+}
+
+td, th {
+    border: 2px solid black;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/*modal*/
+
+.book-details {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    transition: .5s ease;
+    animation: fade 1s ease;
+}
+
+.book-details h1 {
+    font-size: 50px;
+}
+
+.book-details img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.book-details h3 {
+    font-size: 40px;
+}
+
+.price {
+    font-size: 60px;
+    font-family: cursive;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    font-size: 50px;
+    background: red;
+    border-radius: 30%;
+    padding: 1rem 2rem;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    opacity: 0.5;
+}
+
+.rating-container {
+    background: black;
+    width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.rating-container button {
+    background: red;
+}
+
+.rating {
+    font-size: 35px;
+}
+
+.rating-container button {
+    margin: 8px;
+}
+
+.add-book-modal {
+    margin: 15px auto;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-family: monospace, sans-serif;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: .5;
+    position: absolute;
+    right: 40px;
+    top: 400px;
+}
+
+.add-book-modal span {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 15px;
+}
+
+.add-book-modal input {
+    padding: 0.5rem 0.5rem;
+}
+
+.add-book-modal label {
+    margin: 10px;
+}
+
+.add-book-modal button {
+    margin: 10px;
+}
+
+.pagination {
+    margin-top: 10px;
+}
+
+.curr-page {
+    font-size: 2rem;
+}
+
+/*helper class*/
+
+.hide {
+    display: none;
+}
+
+.btn {
+    outline: 0;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    background: black;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-read {
+    background-color: lightblue;
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+.btn-update {
+    background-color: #184a83
+}
+
+.btn-add {
+    background-color: rgb(77, 17, 146);
+}
+
+.sorted::after {
+    content: '▴';
+}
+
+.desc-sorted::after {
+    content: '▾';
+}
+
+.clickable {
+    background: gray;
+    color: white;
+}
+
+.clickable:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    td, th {
+        padding: 8px
+    }
+    .modal-welcome {
+        left: 200px;
+    }
+    .container {
+        margin-left: 100px;
+    }
+}
