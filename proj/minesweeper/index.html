@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Minesweeper</title>
+    <link rel="icon" href="imgs/icon.png" />
+</head>
+
+<body onload="init()">
+
+    <div class="game">
+
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>MineSweeper - Rick edition</h1>
+            <div class="smiley">
+                <span><img onclick="init()" class="smile-img" src="imgs/rick-win.png" alt="" /></span>
+            </div>
+            <div class="manual-mode">
+                <img src="imgs/pickaxe.png" class="axe" onclick="activateManualMode(this)" />
+                <button class="manual-btn" onclick="hideManualMines()">End Manual Mode</button>
+            </div>
+            <!--hints-->
+            <div class="hints">
+                <p>Meeseeks Left:</p>
+                <span><img src="imgs/messeeks.png" class="hint" onclick="hintClicked(this)" /></span>
+                <span><img src="imgs/messeeks.png" class="hint" onclick="hintClicked(this)" /></span>
+                <span><img src="imgs/messeeks.png" class="hint" onclick="hintClicked(this)" /></span>
+            </div>
+            <!--lifes-->
+            <div class="lifes">
+                <span class="life"></span> Lifes left
+            </div>
+            <!--manuel-mode-->
+        </div>
+        <!--the board-->
+        <table class="board-table">
+            <tbody class="board"></tbody>
+        </table>
+        <button class="undo" onclick="undoClicked()">🔁 Undo</button>
+        <!--bubble-->
+        <div class="bubble">
+            <span class="bubble-span"></span>
+            <!-- <button onclick="init()">Play again</button> -->
+        </div>
+        <!--level modal-->
+        <div class="level-modal">
+            <div class="level-buttons">
+                <button class="beginner" onclick="pickMode(4,2,'beginner')">Beginner</button>
+                <button class="medium" onclick="pickMode(8,12,'medium')">Medium</button>
+                <button class="expert" onclick="pickMode(12,30,'expert')">Expert</button>
+            </div>
+        </div>
+        <!--safe-click-->
+        <div class="safe">
+            <button class="safe-click" onclick="revealSafeCell()"> <img src="imgs/hint.png" class="safe-rick" /> Safe
+                Click</button>
+            <p class="click-left">3 Safe Click Available</p>
+        </div>
+        <!--timer-->
+
+    </div>
+    <div class="timer">
+        <span class="time"></span>
+    </div>
+    <button class="change-user" onclick="changeUser()">Change user</button>
+    <button onclick="openModal()" class="leaderboard-btn">🏆 Leaderboard</button>
+
+    <div class="score-modal">
+        <div class="score-popup">
+            <button onclick="closeModal()">❌</button>
+            <h3>Leaderboard</h3>
+            <table class="score-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Seconds</th>
+                    <th>Date</th>
+                    <th>Mode</th>
+                </tr>
+                <tr>
+                    <td class="td1-name">None</td>
+                    <td class="td1-time">None</td>
+                    <td class="td1-date"></td>
+                    <td class="td1-mode">Beginner</td>
+                </tr>
+                <tr>
+                    <td class="td2-name">None</td>
+                    <td class="td2-time">None</td>
+                    <td class="td2-date"></td>
+                    <td class="td2-mode">Medium</td>
+                </tr>
+                <tr>
+                    <td class="td3-name">None</td>
+                    <td class="td3-time">None</td>
+                    <td class="td3-date"></td>
+                    <td class="td3-mode">Expert</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- <div class="box">
+    </div> -->
+
+    <!-- <button class="vibrate-btn">Vibrate</button> -->
+    <!-- <div class="score-modal">
+        <div class="score-popup">
+            <button onclick="closeModal()">✖️</button>
+            <h3>Leaderboard</h3>
+            <p>Beginner: <span class="score-beginner"></span></p>
+            <p>Medium: <span class="score-medium"></span></p>
+            <p>Expert: <span class="score-expert"></span></p>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="card show"></div> -->
+
+
+
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

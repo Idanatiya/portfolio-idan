@@ -1,20 +1,19 @@
-var gProjects;
 
 
 
+var gProjects = [
+    { id: 'minesweeper', name: 'Mine Sweeper', desc: 'some text', publishedAt: Date.now(), labels: ['Sprint 1 project', 'HTML/CSS/JS'] },
+    { id: 'minesweeper', name: 'Mine Sweeper', desc: 'some text', publishedAt: Date.now(), labels: ['Sprint 1 project', 'HTML/CSS/JS'] },
+    { id: 'minesweeper', name: 'Mine Sweeper', desc: 'some text', publishedAt: Date.now(), labels: ['Sprint 1 project', 'HTML/CSS/JS'] },
+    { id: 'minesweeper', name: 'Mine Sweeper', desc: 'some text', publishedAt: Date.now(), labels: ['Sprint 1 project', 'HTML/CSS/JS'] },
+    { id: 'minesweeper', name: 'Mine Sweeper', desc: 'some text', publishedAt: Date.now(), labels: ['Sprint 1 project', 'HTML/CSS/JS'] }
 
-function createProject(id, name, title, desc, url,) {
-    var project = {
-        id,
-        name,
-        title,
-        desc,
-        url,
-        publishedAt: Date.now(),
-        lables: []
+]
 
-    }
-    return project;
+function getProjects() {
+    return gProjects;
 }
+
+
 
 
