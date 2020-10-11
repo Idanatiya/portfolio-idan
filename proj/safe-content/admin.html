@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+
+<body onload="initAdminPanel()">
+    <div class="container">
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+            <a href="index.html" onclick="onLogout()">Logout</a>
+            <select onchange="onSetSort(this.value)">
+                <option value="NAME">Name</option>
+                <option value="LAST_LOGIN">Last Login</option>
+            </select>
+        </div>
+        <div class="table-container show">
+            <table class="board-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Last Login</th>
+                        <th>isAdmin</th>
+                    </tr>
+                </thead>
+                <tbody class="user-table"></tbody>
+            </table>
+        </div>
+        <div class="cards-container"></div>
+        <button class="mode-btn" onclick="onToggleMode()">Show Cards</button>
+    </div>
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/services/users-service.js"></script>
+    <script src="js/services/admin-service.js"></script>
+    <script src="js/admin-controller.js"></script>
+    <script src="js/user-controller.js"></script>
+</body>
+
+</html>

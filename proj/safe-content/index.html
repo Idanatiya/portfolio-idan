@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dojo Entrance</title>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="form-container show">
+            <img src="imgs/ninja.png" class="ninja" />
+            <h1>Welcome Ninja!</h1>
+            <p>Please login to enter to the dojo!</p>
+            <div class="form-control">
+                <label>Name:</label>
+                <input type="text" class="name">
+            </div>
+            <div class="form-control">
+                <label>Password:</label>
+                <input type="password" class="password">
+            </div>
+            <button class="btn login" onclick="onLogin()">Pew!!</button>
+        </div>
+        <div class="secret-area">
+            <h1>Welcome to the dojo, <span class="logged-user"></span></h1>
+            <p>Your last login was on: <span class="last-login"></span></p>
+            <h1>You Will become a ninja coder!</h1>
+            <img src="imgs/ninja-logged.png" class="ninja-img">
+            <a href="admin.html" class="admin-panel">Admin Panel</a>
+            <button class="btn logout" onclick="onLogout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="js/services/utils-service.js"></script>
+    <script src="js/services/storage-service.js"></script>
+    <script src="js/admin-controller.js"></script>
+    <script src="js/services/users-service.js"></script>
+    <script src="js/user-controller.js"></script>
+</body>
+
+</html>

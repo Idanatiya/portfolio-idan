@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: gray;
+    height: 100vh;
+    /* background-image: url(../imgs/ninja2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: 500px; */
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container {
+    background: white;
+    padding: 5rem;
+    border-radius: 15px;
+    box-shadow: 10px 3px 24px 0px rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+.form-container h1 {
+    display: inline;
+}
+
+.form-container input {
+    margin-top: 5px;
+}
+
+.form-container button {
+    margin: 15px;
+    padding: 0.5rem 1.5rem;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    border-radius: 10px;
+    background: black;
+    color: white;
+}
+
+.ninja {
+    width: 150px;
+    height: 150px;
+}
+
+/*logout btn*/
+
+.logout {
+    font-size: 30px;
+    font-family: cursive, sans-serif;
+}
+
+.secret-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    font-family: cursive;
+    display: none;
+}
+
+.logged-user {
+    font-size: 35px;
+}
+
+.admin-panel {
+    display: none;
+}
+
+.ninja-img {
+    width: 400px;
+    height: 400px;
+}
+
+/*helper classes*/
+
+.show {
+    display: block;
+}
+
+.btn {
+    margin: 15px;
+    padding: 0.5rem 1.5rem;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,361 @@
+@font-face {
+    font-family: SouthPark;
+    src: url('../fonts/911Fonts.com_SouthParkRegular__-_911fonts.com_fonts_pTDG.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+* {
+    margin: 0;
+    box-sizing: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: #292c34;
+    background-image: url('../background-imgs/1.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 640px 950px;
+    background-position-y: 400px;
+    overflow: hidden;
+    cursor: url('../assets/Kenny-icon.png'), auto;
+    /* font-family: SouthPark, sans-serif; */
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/*header style*/
+
+.header {
+    text-align: center;
+    font-family: SouthPark, sans-serif;
+    color: white;
+}
+
+.header h1 {
+    margin: 20px;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info p {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 3rem;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+}
+
+.timer {
+    margin: 5px;
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/*questions style*/
+
+.questions {
+    margin-top: 150px;
+}
+
+.question {
+    width: 420px;
+    height: 60px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    color: black;
+    list-style-type: none;
+    font-size: 30px;
+    font-family: SouthPark, sans-serif;
+    margin-top: 5px;
+    /* margin: 5px auto; */
+}
+
+.question:hover {
+    opacity: 0.8;
+}
+
+.questions ul li {
+    list-style: none;
+}
+
+.quest-img {
+    width: 400px;
+    height: 400px;
+    padding: 1px;
+    border: 10px solid white;
+    border-radius: 5px;
+}
+
+/***Bubbles styles****/
+
+.bubble {
+    background-color: #f8f8f8;
+    border: 1px solid #c8c8c8;
+    border-radius: 10px;
+    width: 225px;
+    text-align: center;
+    padding: 60px;
+    position: absolute;
+    right: 470px;
+    top: 490px;
+    animation: fade 0.5s ease;
+    transition: all 0.5 ease;
+    /* display: none; */
+    color: black;
+    font-family: SouthPark, sans-serif;
+}
+
+.bubble-content {
+    font-size: 1.2rem;
+}
+
+/*show bubble*/
+
+.bubble.show {
+    display: block;
+}
+
+/*show win bubble*/
+
+.bubble-win {
+    display: none;
+}
+
+.bubble-win button, .continue-btn, .change-name {
+    border: 0;
+    outline: 0;
+    background: black;
+    color: white;
+    font-family: SouthPark, sans-serif;
+    font-size: 17px;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: url('../assets/icon.png'), auto;
+}
+
+.bubble-win button:hover, .welcome-popup button:hover {
+    opacity: 0.8;
+}
+
+.bubble-win h3 {
+    font-size: 18px;
+    color: black;
+}
+
+/* .arrow-left {} */
+
+.start-button {
+    width: 300px;
+    height: 300px;
+}
+
+.start-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.8s ease;
+}
+
+/*footer*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: white;
+}
+
+footer span {
+    display: block;
+}
+
+.welcome-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 3;
+}
+
+.welcome-popup {
+    cursor: pointer;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.welcome-popup .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: 0;
+    border: 0;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 20px;
+    background: black;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.welcome-popup h3 {
+    margin: 15px;
+    font-family: SouthPark, sans-serif;
+}
+
+.welcome-popup input {
+    padding: 0.5rem 0.5rem;
+    font-size: 25px;
+    font-family: SouthPark, sans-serif;
+}
+
+/*alerts*/
+
+.alert.modal-alert, .alert.success {
+    /* position: absolute;
+    top: 40px;
+    right: 50px; */
+    padding: 12px;
+    width: 200px;
+    background-color: #f44336;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: SouthPark, sans-serif;
+    margin-bottom: 10px;
+    display: none;
+    /* display: none; */
+}
+
+.alert.success {
+    background-color: green;
+    position: absolute;
+    font-size: 12px;
+    top: 100px;
+    right: 50px;
+}
+
+.change-name {
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0.3rem 1rem;
+}
+
+.change-name:hover {
+    transform: rotateZ(10deg);
+    transition: transform 0.5s ease;
+}
+
+/*logos*/
+
+.logo-hankey {
+    width: 65px;
+    height: 65px;
+}
+
+.butters-logo {
+    width: 45px;
+    height: 45px;
+}
+
+.southpark-logo {
+    width: 70px;
+    height: 70px;
+}
+
+.southpark-logo2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.ca-logo:hover {
+    transform: scale(1.2) rotateZ(20deg);
+    transition: transform 0.5s ease;
+}
+
+.southpark-logo:hover {
+    transform: rotateZ(10deg);
+    transition: all 0.5s ease;
+}
+
+/*media query*/
+
+@media (max-width: 1600px) {
+    body {
+        background-size: 400px 800px;
+        background-position-y: 400px;
+    }
+    .ca-logo {
+        width: 75px;
+        height: 75px;
+    }
+    .header h1 {
+        font-size: 20px;
+    }
+    .header p {
+        font-size: 15px;
+    }
+    .bubble {
+        right: 330px;
+    }
+    .start-button {
+        width: 150px;
+        height: 150px;
+    }
+    .info p {
+        font-size: 35px;
+    }
+    .timer {
+        font-size: 30px;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.unhide {
+    display: block;
+}

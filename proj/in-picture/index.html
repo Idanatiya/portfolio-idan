@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/Kenny-icon.png">
+    <title>In Picture</title>
+</head>
+
+<body onload="loadData()">
+    <div class="container">
+        <div class="header">
+            <h1><img src="assets/ca-logo.png" class="ca-logo" /> Coding Academy challange - Idan Atiya</h1>
+            <p>Welcome to <img src="assets/southpark.png" class="southpark-logo" /> Theme Picture in game</p>
+            <img onclick="init()" class="start-button" src="assets/start-button.png" />
+        </div>
+
+        <div class="info">
+            <p>Timer: <span class="timer">Game not started...</span></p>
+        </div>
+
+        <div class="questions">
+        </div>
+    </div>
+    <div class="bubble">
+        <div class="bubble-content">
+            <span>Welcome <span class="username"></span>!</span>
+        </div>
+    </div>
+    <div class="bubble bubble-win">
+        <!-- <div>
+            <h3>YOU WON</h3>
+            <img class='logo-hankey' src="assets/mr-hankey.png" />
+        </div> -->
+        <h3><img class='logo-hankey' src="assets/mr-hankey.png" /> YOU WON</h3>
+        <button onclick="restGame()">Restart!</button>
+    </div>
+
+    <div class="welcome-container">
+        <div class="welcome-popup">
+            <button class="close-btn" onclick="closeModal()">x</button>
+            <img src="assets/southpark2.png" class="southpark-logo2" />
+            <h3>What is Your name?</h3>
+            <div class="alert modal-alert">✖️ Please add a username</div>
+            <input type="text" class="name" placeholder="Enter Name" required>
+            <button class="continue-btn" onclick="saveNameToStorage()">Continue</button>
+        </div>
+    </div>
+
+    <div class="alert success">
+        <h3>✔️ Name has been saved</h3>
+    </div>
+    <footer>
+        <button onclick="showModal()" class="change-name"><img src="assets/butters.png" class="butters-logo" /> Change
+            name</button>
+        <span>☕ Coffeeright © Coding Academy</span>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

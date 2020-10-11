@@ -3,6 +3,10 @@ body {
     font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .card {
     margin: 0 auto;
     display: flex;
@@ -13,6 +17,11 @@ body {
     position: relative;
 }
 
+/* .skill-logo {
+    width: 250px;
+    height: 250px;
+} */
+
 .card img {
     position: absolute;
     top: 0;
@@ -20,6 +29,7 @@ body {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .card a {
@@ -102,6 +112,12 @@ body {
     -webkit-tap-highlight-color: #fed136;
 }
 
+.btn-submit {
+    cursor: pointer;
+    background: #111111f2;
+    color: white
+}
+
 .offcanvas-btn {
     z-index: 100000;
     position: fixed;
@@ -109,7 +125,8 @@ body {
     right: 3%;
     height: 50px;
     width: 50px;
-    background: #e2cb36;
+    background: #a51616;
+    color: white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -126,7 +143,8 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: #dc3545eb;
+    color: white;
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -135,6 +153,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.contact-logo {
+    width: 200px;
+    height: 200px;
 }
 
 .offcanvas-aside img {
@@ -164,7 +187,8 @@ body {
 }
 
 #mainNav {
-    background-color: #222222;
+    background-color: gray;
+    color: white;
     z-index: 5;
 }
 
@@ -173,20 +197,21 @@ body {
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color: black;
     border: 0;
-    background-color: #fed136;
+    background-color: white;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
 #mainNav .navbar-brand {
-    color: #fed136;
+    color: white;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+    font-size: 40px;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: #fec503;
+    color: white;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -195,12 +220,14 @@ body {
     padding: 0.75em 0;
     letter-spacing: 1px;
     color: white;
+    font-size: 20px;
+    font-weight: bold;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: white;
 }
 
 @media (min-width: 992px) {
@@ -218,28 +245,32 @@ body {
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         transition: all 0.3s;
+        font-size: 50px;
+        color: black;
     }
     #mainNav .navbar-nav .nav-item .nav-link {
         padding: 1.1em 1em !important;
+        color: black !important;
     }
     #mainNav.navbar-shrink {
         padding-top: 0;
         padding-bottom: 0;
-        background-color: #222222;
+        background-color: gray;
     }
     #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
+        color: white;
     }
 }
 
 header.masthead {
     text-align: center;
-    color: white;
-    background-image: url("../img/header-bg.jpg");
+    color: black;
+    background-image: url("../img/header.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center center;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -655,6 +686,13 @@ header.masthead .intro-text .intro-heading {
     width: 225px;
     height: 225px;
     border: 7px solid white;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.team-member img:hover {
+    transform: scale(1.2);
 }
 
 .team-member h4 {
@@ -787,48 +825,40 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     padding: 20px 40px;
     border-radius: 3px;
     color: white;
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: white;
+    background-color: #111;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
 
-.btn-xl.focus, .btn-xl:focus {
-    color: white;
-    border-color: #b48b01;
-    background-color: #fec503;
-}
-
 .btn-xl:hover {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    background-color: red;
+}
+
+.btn-xl.focus, .btn-xl:focus {
+    color: white;
+    background-color: #222;
 }
 
 .btn-xl.active, .btn-xl:active, .open>.btn-xl.dropdown-toggle {
     color: white;
-    border-color: #f6bf01;
-    background-color: #fec503;
+    background-color: #222;
 }
 
 .btn-xl.active.focus, .btn-xl.active:focus, .btn-xl.active:hover, .btn-xl:active.focus, .btn-xl:active:focus, .btn-xl:active:hover, .open>.btn-xl.dropdown-toggle.focus, .open>.btn-xl.dropdown-toggle:focus, .open>.btn-xl.dropdown-toggle:hover {
     color: white;
-    border-color: #b48b01;
-    background-color: #dcab01;
+    background-color: #222;
 }
 
 .btn-xl.active, .btn-xl:active, .open>.btn-xl.dropdown-toggle {
-    background-image: none;
+    color: white;
+    background-color: #222;
 }
 
 .btn-xl.disabled.focus, .btn-xl.disabled:focus, .btn-xl.disabled:hover, .btn-xl[disabled].focus, .btn-xl[disabled]:focus, .btn-xl[disabled]:hover, fieldset[disabled] .btn-xl.focus, fieldset[disabled] .btn-xl:focus, fieldset[disabled] .btn-xl:hover {
-    border-color: #fed136;
-    background-color: #fed136;
-}
-
-.btn-xl .badge {
-    color: #fed136;
-    background-color: white;
+    color: white;
+    background-color: #222;
 }
 
 /* reset bootstrap*/
